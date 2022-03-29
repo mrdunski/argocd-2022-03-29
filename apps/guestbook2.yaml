@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: guestbook-chart
-    targetRevision: master
+    targetRevision: HEAD
     repoURL: https://github.com/mrdunski/argocd-2022-03-29.git
   syncPolicy:
     automated:

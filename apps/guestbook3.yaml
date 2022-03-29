@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  destination:
+    namespace: pdunski3
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: guestbook-chart
+    targetRevision: master
+    repoURL: https://github.com/mrdunski/argocd-2022-03-29.git
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

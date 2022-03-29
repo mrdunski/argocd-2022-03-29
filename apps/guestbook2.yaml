@@ -11,6 +11,7 @@ spec:
   source:
     path: guestbook-chart
     targetRevision: master
+    repoURL: https://github.com/mrdunski/argocd-2022-03-29.git
   syncPolicy:
     automated:
       prune: true
